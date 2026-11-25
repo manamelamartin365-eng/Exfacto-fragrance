@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#171513">
+<title>Accept Admin Invitation | Exfacto Fragrances</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:light;--ink:#211e1a;--muted:#777067;--paper:#f5f1e9;--line:#ded7ca;--gold:#b58c50}
+*{box-sizing:border-box}body{margin:0;min-height:100vh;background:var(--paper);color:var(--ink);font-family:"DM Sans",sans-serif;display:grid;place-items:center;padding:28px}
+.panel{width:min(100%,480px);background:#fffdf9;border:1px solid var(--line);padding:clamp(28px,6vw,52px);box-shadow:0 24px 70px #241b1012}
+.brand{font-size:12px;letter-spacing:.24em;font-weight:700;text-align:center;margin:0 0 38px}.brand span{color:var(--gold)}
+.eyebrow{text-align:center;color:var(--gold);font-size:10px;letter-spacing:.22em;font-weight:700;margin:0 0 12px}
+h1{font:500 clamp(30px,7vw,40px)/1.12 "Playfair Display",serif;text-align:center;margin:0 0 14px}
+.intro{text-align:center;color:var(--muted);font-size:14px;line-height:1.7;margin:0 auto 30px;max-width:340px}
+label{display:block;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin:18px 0 8px}
+input{width:100%;height:50px;border:1px solid var(--line);background:#fff;padding:0 14px;font:14px "DM Sans",sans-serif;color:var(--ink);border-radius:0;outline:none}
+input:focus{border-color:var(--gold);box-shadow:0 0 0 2px #b58c5020}
+input.code{letter-spacing:.38em;font-size:20px;text-align:center;font-weight:700}
+button{width:100%;height:52px;margin-top:25px;border:0;background:var(--ink);color:#fff;font:700 11px "DM Sans",sans-serif;letter-spacing:.16em;cursor:pointer}
+button:hover{background:#3a3025}button:disabled{opacity:.55;cursor:wait}
+.message{display:none;margin:18px 0 0;padding:12px 14px;font-size:13px;line-height:1.6;background:#f5f1e9;color:var(--ink);overflow-wrap:anywhere}
+.message.show{display:block}.message.error{background:#fbefed;color:#8c3028}
+.foot{text-align:center;color:var(--muted);font-size:11px;line-height:1.6;margin:26px 0 0}
+@media(max-width:420px){body{padding:14px}.panel{padding:28px 22px}.brand{margin-bottom:30px}}
+</style>
+</head>
+<body>
+<main class="panel">
+<p class="brand">EXFACTO <span>FRAGRANCES</span></p>
+<p class="eyebrow">PRIVATE ADMIN ACCESS</p>
+<h1>Complete your invitation.</h1>
+<p class="intro">Enter the six-digit code from your Exfacto invitation email, then create a password for your admin account.</p>
+<form id="invite-form">
+<label for="email">Email address</label>
+<input id="email" name="email" type="email" autocomplete="email" required value="manamelamartin365@gmail.com">
+<label for="token">Six-digit email code</label>
+<input class="code" id="token" name="token" type="text" inputmode="numeric" autocomplete="one-time-code" pattern="[0-9]{6}" maxlength="6" placeholder="000000" required>
+<label for="password">Create password</label>
+<input id="password" name="password" type="password" autocomplete="new-password" minlength="10" required>
+<label for="confirm-password">Confirm password</label>
+<input id="confirm-password" name="confirm-password" type="password" autocomplete="new-password" minlength="10" required>
+<button id="submit-button" type="submit">VERIFY INVITATION &amp; SET PASSWORD</button>
+<p id="form-message" class="message" role="status" aria-live="polite"></p>
+</form>
+<p class="foot">This page is for the invited Exfacto administrator only.<br>Your password is sent securely to Supabase and is not stored on this website.</p>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/admin-invite.js"></script>
+</body>
+</html>
