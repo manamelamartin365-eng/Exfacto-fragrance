@@ -944,3 +944,95 @@ body:has(.hero) .site-header{box-shadow:0 5px 22px rgba(32,32,30,.035)}
 @media(prefers-reduced-motion:reduce){
   .campaign .button-outline{transition:none}
 }
+
+
+/* EXFACTO APPROACH — refined three-part brand philosophy */
+.promise-section{
+  width:100%;
+  max-width:none;
+  padding:118px max(8%,calc((100% - 1120px)/2)) 126px;
+  background:#eeece6;
+  border-top:1px solid #e2ddd3;
+  border-bottom:1px solid #e2ddd3;
+  text-align:center;
+}
+.promise-section>.eyebrow{
+  margin-bottom:18px;
+  letter-spacing:3px;
+}
+.promise-section>h2{
+  max-width:720px;
+  margin:0 auto 66px;
+  font-size:clamp(42px,4.8vw,62px);
+  line-height:1.08;
+  letter-spacing:-1.5px;
+}
+.promise-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:0;
+  text-align:left;
+  border-top:1px solid #cfc6b8;
+  border-bottom:1px solid #cfc6b8;
+}
+.promise-grid article{
+  min-width:0;
+  padding:29px 34px 31px;
+  border-top:0;
+  border-right:1px solid #d7cfc2;
+  transition:background .25s ease;
+}
+.promise-grid article:first-child{padding-left:0}
+.promise-grid article:last-child{padding-right:0;border-right:0}
+.promise-grid article:hover{background:rgba(255,255,255,.34)}
+.promise-grid article>span{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:34px;
+  height:34px;
+  border:1px solid #bda987;
+  border-radius:50%;
+  color:#8d744f;
+  font-size:9px;
+  letter-spacing:1px;
+}
+.promise-grid h3{
+  margin:25px 0 10px;
+  font-size:25px;
+  line-height:1.2;
+  letter-spacing:-.3px;
+}
+.promise-grid p{
+  max-width:260px;
+  margin:0;
+  font-size:12px;
+  line-height:1.95;
+  color:#706a60;
+}
+@media(max-width:850px){
+  .promise-section{padding:90px 7% 96px}
+  .promise-section>h2{margin-bottom:48px}
+  .promise-grid article{padding:25px 20px}
+  .promise-grid article:first-child{padding-left:0}
+  .promise-grid article:last-child{padding-right:0}
+  .promise-grid h3{font-size:21px}
+}
+@media(max-width:620px){
+  .promise-section{padding:76px 7% 82px}
+  .promise-section>h2{font-size:clamp(38px,10vw,46px);margin-bottom:36px}
+  .promise-grid{grid-template-columns:1fr;border-bottom:0}
+  .promise-grid article,
+  .promise-grid article:first-child,
+  .promise-grid article:last-child{
+    padding:23px 2px 25px;
+    border-right:0;
+    border-bottom:1px solid #d7cfc2;
+  }
+  .promise-grid article:last-child{border-bottom:0}
+  .promise-grid h3{margin:16px 0 7px;font-size:22px}
+  .promise-grid p{max-width:360px;font-size:11px}
+}
+@media(prefers-reduced-motion:reduce){
+  .promise-grid article{transition:none}
+}
