@@ -862,3 +862,85 @@ body:has(.hero) .site-header{box-shadow:0 5px 22px rgba(32,32,30,.035)}
 @media(prefers-reduced-motion:reduce){
   .featured-section .product-card,.featured-section .product-image img{transition:none}
 }
+
+
+/* CAMPAIGN EDITORIAL PANEL — preserve the existing supplied campaign photograph */
+.campaign{
+  min-height:610px;
+  grid-template-columns:minmax(0,1.04fr) minmax(0,.96fr);
+  background:#262522;
+  overflow:hidden;
+}
+.campaign-photo{
+  min-height:610px;
+  background-size:cover;
+  background-position:center 38%;
+  opacity:1;
+  position:relative;
+}
+.campaign-photo:after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(90deg,rgba(20,20,19,.04) 55%,rgba(20,20,19,.32) 100%);
+}
+.campaign-copy{
+  align-self:stretch;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  padding:100px clamp(48px,8vw,125px);
+  position:relative;
+}
+.campaign-copy:before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:15%;
+  bottom:15%;
+  width:1px;
+  background:linear-gradient(transparent,rgba(205,180,139,.55),transparent);
+}
+.campaign .eyebrow{
+  margin-bottom:25px;
+  letter-spacing:2.8px;
+}
+.campaign h2{
+  font-size:clamp(48px,5.2vw,72px);
+  line-height:1.02;
+  letter-spacing:-1.8px;
+  margin-bottom:24px;
+}
+.campaign-copy>p:not(.eyebrow){
+  max-width:330px;
+  font-size:13px;
+  line-height:2;
+  color:rgba(255,255,255,.76);
+  margin-bottom:35px;
+}
+.campaign .button-outline{
+  align-self:flex-start;
+  min-height:50px;
+  border-color:rgba(211,190,157,.75);
+  color:#eee7dc;
+  transition:background .25s ease,color .25s ease,border-color .25s ease;
+}
+.campaign .button-outline:hover{
+  background:#c4aa80;
+  border-color:#c4aa80;
+  color:#242321;
+}
+@media(max-width:850px){
+  .campaign,.campaign-photo{min-height:500px}
+  .campaign-copy{padding:75px 8%}
+}
+@media(max-width:620px){
+  .campaign{grid-template-columns:1fr}
+  .campaign-photo{min-height:360px;background-position:center 35%}
+  .campaign-copy{padding:65px 8% 72px}
+  .campaign-copy:before{left:8%;right:8%;top:0;bottom:auto;width:auto;height:1px;background:linear-gradient(90deg,transparent,rgba(205,180,139,.55),transparent)}
+  .campaign h2{font-size:48px}
+}
+@media(prefers-reduced-motion:reduce){
+  .campaign .button-outline{transition:none}
+}
