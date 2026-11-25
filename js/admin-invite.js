@@ -1,7 +1,7 @@
 (() => {
   "use strict";
   const SUPABASE_URL = "https://udsnbtmakcyqhmfdqqre.supabase.co";
-  const SUPABASE_ANON_KEY = "ADD_YOUR_SUPABASE_PUBLISHABLE_OR_ANON_KEY_HERE";
+  const SUPABASE_ANON_KEY = "sb_publishable_u9261Mg24iVJKB9ierScZw_qkKs3YRv";
   const form = document.getElementById("invite-form");
   const button = document.getElementById("submit-button");
   const message = document.getElementById("form-message");
