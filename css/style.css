@@ -608,3 +608,28 @@ body:has(.hero) .site-header{box-shadow:0 5px 22px rgba(32,32,30,.035)}
 @media(max-width:420px){
  .hero-image{background-position:70% 60% !important}
 }
+
+
+/* HOMEPAGE HERO — show the complete original model-and-fragrance photograph */
+.hero-image{
+  background-image:url("../assets/campaign-woman-01.jpg") !important;
+  background-size:contain !important;
+  background-position:right center !important;
+  background-repeat:no-repeat !important;
+  background-color:#171613;
+  opacity:1 !important;
+  transform:none !important;
+  animation:none !important;
+}
+.hero-shade{
+  background:linear-gradient(90deg,#171613 0%,rgba(23,22,19,.96) 30%,rgba(23,22,19,.58) 55%,rgba(23,22,19,.08) 100%) !important;
+}
+@media(max-width:760px){
+  .hero-image{
+    background-size:100% auto !important;
+    background-position:center bottom !important;
+  }
+  .hero-shade{
+    background:linear-gradient(180deg,rgba(23,22,19,.96) 0%,rgba(23,22,19,.82) 36%,rgba(23,22,19,.24) 72%,rgba(23,22,19,.12) 100%) !important;
+  }
+}
