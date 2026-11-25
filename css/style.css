@@ -700,3 +700,20 @@ body:has(.hero) .site-header{box-shadow:0 5px 22px rgba(32,32,30,.035)}
   }
   .intro-text p{font-size:13px;line-height:2}
 }
+
+
+/* RESTORE ORIGINAL HOMEPAGE HERO IMAGE — leave the front image unchanged */
+.hero-image{
+  background-image:url("../assets/homepage-exfacto-store.jpg") !important;
+  background-size:cover !important;
+  background-position:center 43% !important;
+  background-repeat:no-repeat !important;
+  background-color:#171512;
+  opacity:1 !important;
+  filter:none !important;
+  transform:none !important;
+  animation:none !important;
+}
+.hero-shade{
+  background:linear-gradient(90deg,rgba(10,10,9,.88) 0%,rgba(10,10,9,.63) 43%,rgba(10,10,9,.08) 100%),linear-gradient(0deg,rgba(0,0,0,.35),transparent 35%) !important;
+}
