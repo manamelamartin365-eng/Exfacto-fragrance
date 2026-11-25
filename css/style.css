@@ -598,3 +598,13 @@ body:has(.hero) .site-header{box-shadow:0 5px 22px rgba(32,32,30,.035)}
 @media(prefers-reduced-motion:reduce){
  .product-card,.hero-gender-links a,.social-links a{transition:none}
 }
+
+
+/* HERO IMAGE FRAMING — keep the model's hand and fragrance bottle in view */
+.hero-image{background-position:66% 62% !important}
+@media(max-width:760px){
+ .hero-image{background-position:69% 62% !important}
+}
+@media(max-width:420px){
+ .hero-image{background-position:70% 60% !important}
+}
