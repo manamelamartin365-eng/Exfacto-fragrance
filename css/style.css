@@ -717,3 +717,148 @@ body:has(.hero) .site-header{box-shadow:0 5px 22px rgba(32,32,30,.035)}
 .hero-shade{
   background:linear-gradient(90deg,rgba(10,10,9,.88) 0%,rgba(10,10,9,.63) 43%,rgba(10,10,9,.08) 100%),linear-gradient(0deg,rgba(0,0,0,.35),transparent 35%) !important;
 }
+
+
+/* FEATURED COLLECTION — premium product-card refinement; product data and assets unchanged */
+.featured-section{
+  background:#f5f3ee;
+  padding:104px 0 112px;
+}
+.featured-section .section-heading{
+  margin-bottom:44px;
+  gap:28px;
+}
+.featured-section .section-heading>div{
+  max-width:620px;
+}
+.featured-section .section-heading .eyebrow{
+  margin-bottom:13px;
+  letter-spacing:3px;
+}
+.featured-section .section-heading h2{
+  font-size:clamp(38px,4.5vw,58px);
+  line-height:1.08;
+}
+.featured-section .section-heading>.text-link{
+  white-space:nowrap;
+  margin-bottom:8px;
+}
+.featured-section .product-grid{
+  gap:20px;
+  align-items:stretch;
+}
+.featured-section .product-card{
+  display:flex;
+  flex-direction:column;
+  min-width:0;
+  background:#fbfaf7;
+  border:1px solid #e5e1d8;
+  box-shadow:0 8px 24px rgba(39,35,29,.035);
+  transition:transform .28s ease,box-shadow .28s ease,border-color .28s ease;
+}
+.featured-section .product-card:hover{
+  transform:translateY(-5px);
+  border-color:#d1c5b2;
+  box-shadow:0 16px 34px rgba(39,35,29,.085);
+}
+.featured-section .product-image{
+  height:clamp(260px,25vw,340px);
+  border:0;
+  border-bottom:1px solid #ece8e0;
+  background:linear-gradient(145deg,#fffefa 0%,#f0eee8 100%);
+}
+.featured-section .product-image img{
+  padding:24px!important;
+  transition:transform .45s ease;
+}
+.featured-section .product-card:hover .product-image img{
+  transform:scale(1.045);
+}
+.featured-section .product-tag{
+  top:15px;
+  left:15px;
+  background:#eee8dc;
+  color:#6f5a3d;
+  border:1px solid #e0d5c3;
+  font-size:7px;
+  letter-spacing:1.5px;
+}
+.featured-section .product-info{
+  display:flex;
+  flex:1;
+  flex-direction:column;
+  padding:21px 18px 18px;
+}
+.featured-section .product-info h3{
+  font-size:21px;
+  line-height:1.25;
+  margin:0 0 7px;
+}
+.featured-section .product-info>p{
+  font-size:10px;
+  line-height:1.6;
+  letter-spacing:.35px;
+  margin:0 0 7px;
+}
+.featured-section .product-info .product-notes{
+  min-height:0;
+  color:#8b8378;
+}
+.featured-section .product-price{
+  margin-top:auto;
+  padding-top:14px;
+  font-size:11px;
+  letter-spacing:1px;
+  color:#806846;
+}
+.featured-section .product-actions{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:8px;
+  margin-top:15px;
+}
+.featured-section .product-actions .mini-button{
+  min-width:0;
+  min-height:42px;
+  padding:10px 7px;
+  border-color:#cfc5b5;
+  background:transparent;
+  color:#3d3932;
+  font-size:7px;
+  letter-spacing:1px;
+  white-space:nowrap;
+}
+.featured-section .product-actions .mini-button:last-child{
+  background:#292825;
+  border-color:#292825;
+  color:#f8f6f1;
+}
+.featured-section .product-actions .mini-button:hover{
+  background:#a48a61;
+  border-color:#a48a61;
+  color:#fff;
+}
+@media(max-width:850px){
+  .featured-section{padding:84px 0 90px}
+  .featured-section .product-grid{gap:16px}
+  .featured-section .product-image{height:clamp(230px,34vw,300px)}
+  .featured-section .product-info{padding:17px 14px 15px}
+}
+@media(max-width:620px){
+  .featured-section{padding:72px 0 78px}
+  .featured-section .section-heading{margin-bottom:28px}
+  .featured-section .section-heading h2{font-size:39px}
+  .featured-section .section-heading>.text-link{margin-top:17px}
+  .featured-section .product-grid{gap:17px 11px}
+  .featured-section .product-image{height:clamp(175px,49vw,230px)}
+  .featured-section .product-image img{padding:12px!important}
+  .featured-section .product-info{padding:14px 10px 12px}
+  .featured-section .product-info h3{font-size:17px}
+  .featured-section .product-info>p{font-size:9px}
+  .featured-section .product-price{font-size:10px}
+  .featured-section .product-actions{grid-template-columns:1fr;gap:6px;margin-top:12px}
+  .featured-section .product-actions .mini-button{min-height:38px;font-size:7px}
+}
+@media(prefers-reduced-motion:reduce){
+  .featured-section .product-card,.featured-section .product-image img{transition:none}
+}
