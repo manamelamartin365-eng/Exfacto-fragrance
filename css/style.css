@@ -545,3 +545,56 @@ button,a{touch-action:manipulation}
   html{scroll-behavior:auto}
   *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
 }
+
+
+/* HOMEPAGE EDITORIAL FINISH — preserves all supplied imagery and content */
+body:has(.hero) .announcement{letter-spacing:2.8px}
+body:has(.hero) .site-header{box-shadow:0 5px 22px rgba(32,32,30,.035)}
+.hero{isolation:isolate}
+.hero-image{background-position:center 43%;transform:scale(1.015)}
+.hero-shade{background:
+ linear-gradient(90deg,rgba(15,16,15,.88) 0%,rgba(15,16,15,.70) 34%,rgba(15,16,15,.28) 66%,rgba(15,16,15,.08) 100%),
+ linear-gradient(0deg,rgba(15,16,15,.38),transparent 38%)}
+.hero-content{max-width:760px}
+.hero .eyebrow{display:flex;align-items:center;gap:14px}
+.hero .eyebrow:before{content:"";display:block;width:34px;height:1px;background:#d9c7a8;opacity:.9}
+.hero h1{max-width:660px;text-shadow:0 3px 24px rgba(0,0,0,.12)}
+.hero-copy{max-width:365px;letter-spacing:.1px}
+.hero .button{box-shadow:0 8px 24px rgba(0,0,0,.12)}
+.hero-shop-shortcut{max-width:390px}
+.hero-search-row{border-bottom-color:rgba(255,255,255,.52)}
+.hero-gender-links a{transition:border-color .2s ease,color .2s ease}
+.hero-gender-links a:hover{color:#d9c7a8;border-color:#d9c7a8}
+.hero-note{display:flex;align-items:center;gap:8px;letter-spacing:2.1px}
+.intro-section{position:relative}
+.intro-section>div:first-child{position:relative}
+.intro-section>div:first-child:before{content:"";display:block;width:42px;height:1px;background:#a58a61;margin-bottom:25px}
+.intro-text{max-width:405px}
+.featured-section{border-top:1px solid #e4e0d7;border-bottom:1px solid #e4e0d7}
+.section-heading{align-items:end}
+.section-heading .eyebrow{margin-bottom:15px}
+.product-card{transition:transform .25s ease}
+.product-card:hover{transform:translateY(-3px)}
+.product-image{background:linear-gradient(145deg,#fffefa,#f1eee7)}
+.campaign{position:relative}
+.campaign-photo{background-size:cover}
+.campaign-copy .eyebrow{display:flex;align-items:center;gap:13px}
+.campaign-copy .eyebrow:before{content:"";width:30px;height:1px;background:#d9c7a8}
+.promise-grid article{position:relative}
+.promise-grid article:after{content:"";display:block;width:0;height:1px;background:#9c8054;transition:width .25s ease}
+.promise-grid article:hover:after{width:42px}
+.social-band .eyebrow{letter-spacing:2.8px}
+.social-links a{transition:color .2s ease,border-color .2s ease}
+.social-links a:hover{color:#fff;border-color:#fff}
+@media(max-width:760px){
+ .hero-image{background-position:58% center}
+ .hero-shade{background:linear-gradient(90deg,rgba(15,16,15,.82),rgba(15,16,15,.46)),linear-gradient(0deg,rgba(15,16,15,.35),transparent 48%)}
+ .hero .eyebrow{gap:10px}
+ .hero .eyebrow:before{width:24px}
+ .hero-content{max-width:560px}
+ .intro-section>div:first-child:before{margin-bottom:19px}
+ .campaign-copy .eyebrow:before{width:22px}
+}
+@media(prefers-reduced-motion:reduce){
+ .product-card,.hero-gender-links a,.social-links a{transition:none}
+}
