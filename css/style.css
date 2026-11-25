@@ -1036,3 +1036,70 @@ body:has(.hero) .site-header{box-shadow:0 5px 22px rgba(32,32,30,.035)}
 @media(prefers-reduced-motion:reduce){
   .promise-grid article{transition:none}
 }
+
+
+/* SOCIAL BAND — understated editorial closing invitation */
+.social-band{
+  position:relative;
+  overflow:hidden;
+  padding:104px 8% 108px;
+  text-align:center;
+  background:#24211d;
+  border-top:1px solid rgba(202,177,139,.35);
+}
+.social-band:before,
+.social-band:after{
+  content:"";
+  position:absolute;
+  top:50%;
+  width:min(19vw,230px);
+  height:1px;
+  background:linear-gradient(90deg,transparent,rgba(201,176,139,.45));
+}
+.social-band:before{left:0}
+.social-band:after{right:0;transform:rotate(180deg)}
+.social-band>.eyebrow{
+  margin:0 0 19px;
+  color:#c5ad89;
+  letter-spacing:3px;
+}
+.social-band h2{
+  max-width:760px;
+  margin:0 auto 37px;
+  color:#f1ede5;
+  font-size:clamp(38px,4.5vw,59px);
+  line-height:1.12;
+  letter-spacing:-1.3px;
+}
+.social-band h2 em{color:#c7ad86}
+.social-links{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:0;
+}
+.social-links a{
+  display:inline-flex;
+  align-items:center;
+  min-height:43px;
+  padding:0 27px;
+  color:#e7dfd2;
+  border-right:1px solid rgba(207,185,151,.35);
+  font-size:9px;
+  letter-spacing:2px;
+  text-decoration:none;
+  transition:color .2s ease;
+}
+.social-links a:last-child{border-right:0}
+.social-links a:hover{color:#c9ad83}
+@media(max-width:620px){
+  .social-band{padding:78px 7% 82px}
+  .social-band:before,.social-band:after{width:9vw}
+  .social-band h2{font-size:clamp(35px,9vw,44px);margin-bottom:28px}
+  .social-links{gap:8px}
+  .social-links a{padding:0 14px;font-size:8px}
+}
+@media(prefers-reduced-motion:reduce){
+  .social-links a{transition:none}
+}
